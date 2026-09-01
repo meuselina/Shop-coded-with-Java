@@ -1,0 +1,143 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.LinkedList;
+
+public class theshamishop extends JFrame {
+    private shamishop shop;
+    private JButton bsuchen1 = new JButton();
+    private JTextField Suchtextfeld = new JTextField();
+    private JButton bPreisASC1 = new JButton();
+    private JButton bPreisDESC1 = new JButton();
+    private JList<String> jList2 = new JList<>();
+    private DefaultListModel<String> jList2Model = new DefaultListModel<>();
+    private JScrollPane jList2ScrollPane = new JScrollPane(jList2);
+    private JButton bback1 = new JButton();
+    private JTextField jTextField1 = new JTextField();
+    private JLabel lBeschreibung1 = new JLabel();
+    private Canvas canvas1 = new Canvas();
+    
+    public theshamishop(String kategorie) { 
+        super();
+        shop = new shamishop();
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        int frameWidth = 1000; 
+        int frameHeight = 700;
+        setSize(frameWidth, frameHeight);
+        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (d.width - getSize().width) / 2;
+        int y = (d.height - getSize().height) / 2;
+        setLocation(x, y);
+        setTitle("theshamishop");
+        setResizable(false);
+        Container cp = getContentPane();
+        cp.setLayout(null);
+        cp.setBackground(new Color(0xECDFE3));
+        
+        bsuchen1.setBounds(416, 24, 64, 48);
+        bsuchen1.setText("suchen");
+        bsuchen1.setMargin(new Insets(2, 2, 2, 2));
+        bsuchen1.setBackground(new Color(0x536382));
+        bsuchen1.setFont(new Font("Dialog", Font.BOLD, 14));
+        bsuchen1.setForeground(Color.WHITE);
+        cp.add(bsuchen1);
+        
+        Suchtextfeld.setBounds(112, 24, 304, 48);
+        Suchtextfeld.setText("Search...");
+        Suchtextfeld.setFont(new Font("Dialog", Font.BOLD, 18));
+        cp.add(Suchtextfeld);
+        
+        bPreisASC1.setBounds(784, 24, 72, 48);
+        bPreisASC1.setText("PreisASC");
+        bPreisASC1.setMargin(new Insets(2, 2, 2, 2));
+        bPreisASC1.setFont(new Font("Dialog", Font.BOLD, 12));
+        bPreisASC1.setForeground(Color.WHITE);
+        bPreisASC1.setBackground(new Color(0x555E79));
+        cp.add(bPreisASC1);
+        
+        bPreisDESC1.setBounds(872, 24, 72, 48);
+        bPreisDESC1.setText("PreisDESC");
+        bPreisDESC1.setMargin(new Insets(2, 2, 2, 2));
+        bPreisDESC1.setFont(new Font("Dialog", Font.BOLD, 12));
+        bPreisDESC1.setForeground(Color.WHITE);
+        bPreisDESC1.setBackground(new Color(0x525C78));
+        cp.add(bPreisDESC1);
+        
+        jList2.setModel(jList2Model);
+        jList2ScrollPane.setBounds(40, 136, 224, 472);
+        jList2.setFont(new Font("Bodoni MT", Font.BOLD, 26));
+        jList2.setBackground(new Color(0xD5D7E3));
+        cp.add(jList2ScrollPane);
+        
+        bback1.setBounds(40, 24, 56, 48);
+        bback1.setText("back");
+        bback1.setMargin(new Insets(2, 2, 2, 2));
+        bback1.setFont(new Font("Dialog", Font.BOLD, 14));
+        bback1.setForeground(Color.WHITE);
+        bback1.setBackground(new Color(0x5C6681));
+        bback1.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent evt) { 
+                bback1_ActionPerformed(evt);
+            }
+        });
+        cp.add(bback1);
+        
+        jTextField1.setBounds(304, 176, 320, 432);
+        jTextField1.setBackground(new Color(0xD2D2DD));
+        cp.add(jTextField1);
+        
+        lBeschreibung1.setBounds(304, 136, 320, 40);
+        lBeschreibung1.setText("Beschreibung");
+        lBeschreibung1.setBackground(new Color(0x58597E));
+        lBeschreibung1.setForeground(Color.WHITE);
+        lBeschreibung1.setHorizontalAlignment(SwingConstants.CENTER);
+        lBeschreibung1.setFont(new Font("Bodoni MT", Font.BOLD, 28));
+        cp.add(lBeschreibung1);
+        
+        canvas1.setBounds(664, 136, 280, 472);
+        canvas1.setBackground(new Color(0xD1D3E0));
+        cp.add(canvas1);
+        
+        zeigeKategorie(kategorie);
+        setVisible(true);
+    } 
+
+    private void zeigeKategorie(String kategorie) {
+        jList2Model.clear();
+        LinkedList<?> items = null;
+
+        if (kategorie.equalsIgnoreCase("oberteile")) {
+            items = shop.getoberteile();
+        } if (kategorie.equalsIgnoreCase("hosen")) {
+            items = shop.getHosen();
+        }  if (kategorie.equalsIgnoreCase("accessoires")) {
+            items = shop.getAccessoires();
+        }  if (kategorie.equalsIgnoreCase("tracksuits")) {
+            items = shop.getTracksuits();
+        } if (kategorie.equalsIgnoreCase("schuhe")) {
+            items = shop.getSchuhe();
+        }
+
+        if (items != null) {
+            for (Object item : items) {
+                try {
+                    String art = (String) item.getClass().getMethod("getArt").invoke(item);
+                    jList2Model.addElement(art);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            jList2Model.addElement("Kategorie nicht verfügbar.");
+        }
+    }
+
+    private void bback1_ActionPerformed(ActionEvent evt) {
+        this.dispose();
+        new kategorien();
+    }
+
+    public static void main(String[] args) {
+        new theshamishop("oberteile"); // Beispielaufruf mit Kategorie "oberteile"
+    }
+}

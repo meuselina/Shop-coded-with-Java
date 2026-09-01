@@ -1,0 +1,51 @@
+﻿[Files]
+File0=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\Hosen.java
+File1=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\kategorien.java
+File2=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\willkommensframe.java
+
+[Box:  - Hosen]
+X=19
+Y=41
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - kategorien]
+X=1252
+Y=189
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - willkommensframe]
+X=875
+Y=245
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=12
+ShowObjectDiagram=0
+
+[Interactive]
+I0=
+

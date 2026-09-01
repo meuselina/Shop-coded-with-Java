@@ -1,0 +1,26 @@
+﻿[Files]
+File0=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\oberteile.java
+
+[Box:  - oberteile]
+X=39
+Y=45
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=11
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=11
+ShowObjectDiagram=0
+

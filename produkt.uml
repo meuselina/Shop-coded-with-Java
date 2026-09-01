@@ -1,0 +1,65 @@
+﻿[Files]
+File0=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\oberteile.java
+File1=C:\Users\User\OneDrive\Desktop\InfoMan12\2024\shop\produkt.java
+
+[Box:  - hose]
+X=1130
+Y=392
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - oberteile]
+X=541
+Y=249
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - produkt]
+X=1084
+Y=16
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - schuhe]
+X=20
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=12
+ShowObjectDiagram=0
+
+[Connections]
+V0=hose#produkt#Inheritends####0#0#0###0#0
+V1=oberteile#produkt#Inheritends####0#0#0###0#0
+V2=schuhe#produkt#Inheritends####0#0#0###0#0
+
+[Interactive]
+I0=
+

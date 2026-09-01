@@ -1,0 +1,79 @@
+/**
+ *
+ * Beschreibung
+ *
+ * @version 1.0 vom 02.10.2024
+ * @author 
+ */
+
+public class accessoires {
+  
+  // Anfang Attribute
+  private String farbe;
+  private String material;
+  private String produkttyp;
+  private int preis;
+  private int groesse;
+  private String herstellungsdatum;
+  private boolean Verfuegbarkeit;
+  // Ende Attribute
+  
+  // Anfang Methoden
+  public String getFarbe() {
+    return farbe;
+  }
+
+  public void setFarbe(String farbeNeu) {
+    farbe = farbeNeu;
+  }
+
+  public String getMaterial() {
+    return material;
+  }
+
+  public void setMaterial(String materialNeu) {
+    material = materialNeu;
+  }
+
+  public String getProdukttyp() {
+    return produkttyp;
+  }
+
+  public void setProdukttyp(String produkttypNeu) {
+    produkttyp = produkttypNeu;
+  }
+
+  public int getPreis() {
+    return preis;
+  }
+
+  public void setPreis(int preisNeu) {
+    preis = preisNeu;
+  }
+
+  public int getGroesse() {
+    return groesse;
+  }
+
+  public void setGroesse(int groesseNeu) {
+    groesse = groesseNeu;
+  }
+
+  public String getHerstellungsdatum() {
+    return herstellungsdatum;
+  }
+
+  public void setHerstellungsdatum(String herstellungsdatumNeu) {
+    herstellungsdatum = herstellungsdatumNeu;
+  }
+
+  public boolean getVerfuegbarkeit() {
+    return Verfuegbarkeit;
+  }
+
+  public void setVerfuegbarkeit(boolean VerfuegbarkeitNeu) {
+    Verfuegbarkeit = VerfuegbarkeitNeu;
+  }
+
+  // Ende Methoden
+} // end of accessoires
