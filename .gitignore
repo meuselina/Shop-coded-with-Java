@@ -1,3 +1,7 @@
+# compiled Java files
+*.class
+*.jar
+
 # Java-Editor backup files
 *.~ava
 *.~fm
