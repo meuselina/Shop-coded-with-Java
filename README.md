@@ -24,6 +24,12 @@ I originally wrote it for a computer science course at school and later refactor
 - Product details with a matching picture for every category
 - Custom background images
 
+## A quick tour
+
+Choosing a category, opening a product, sorting by price and searching for "black":
+
+<img src="media/demo.gif" width="720" alt="Clicking through categories, product details, sorting and search" />
+
 ## Quick start
 
 You need a JDK (tested with Java 21) and a desktop environment, since this is a GUI app.
