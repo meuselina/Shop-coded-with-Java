@@ -42,7 +42,7 @@ javac -encoding UTF-8 *.java
 java WelcomeFrame
 ```
 
-The image files need to be in the same folder as the program, so start it from the project folder.
+Start it from the project folder, so the app finds its pictures in `images/`.
 
 ## Architecture
 
@@ -68,6 +68,7 @@ classDiagram
 | `ShopData.java` | Product data, search and price sorting |
 | `Product.java` | Abstract base class with all shared product attributes |
 | `Tops.java`, `Pants.java`, `Shoes.java`, `Tracksuits.java`, `Accessories.java` | Product categories, each extends `Product` (inheritance) |
+| `images/` | Category pictures and background images |
 
 ## Built with
 

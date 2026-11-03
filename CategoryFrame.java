@@ -38,7 +38,7 @@ public class CategoryFrame extends JFrame {
 
     // Category buttons
     topsButton.setBounds(48, 280, 152, 288);
-    topsButton.setIcon(new ImageIcon("oberteill.jpg"));
+    topsButton.setIcon(new ImageIcon("images/tops.jpg"));
     topsButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         openShopFrame("tops");
@@ -47,7 +47,7 @@ public class CategoryFrame extends JFrame {
     cp.add(topsButton);
 
     pantsButton.setBounds(232, 280, 152, 288);
-    pantsButton.setIcon(new ImageIcon("hoseee.jpg"));
+    pantsButton.setIcon(new ImageIcon("images/pants.jpg"));
     pantsButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         openShopFrame("pants");
@@ -56,7 +56,7 @@ public class CategoryFrame extends JFrame {
     cp.add(pantsButton);
 
     accessoriesButton.setBounds(416, 280, 152, 288);
-    accessoriesButton.setIcon(new ImageIcon("schmuckkkk.jpg"));
+    accessoriesButton.setIcon(new ImageIcon("images/accessories.jpg"));
     accessoriesButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         openShopFrame("accessories");
@@ -65,7 +65,7 @@ public class CategoryFrame extends JFrame {
     cp.add(accessoriesButton);
 
     shoesButton.setBounds(600, 280, 152, 288);
-    shoesButton.setIcon(new ImageIcon("schuheeee.jpg"));
+    shoesButton.setIcon(new ImageIcon("images/shoes.jpg"));
     shoesButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         openShopFrame("shoes");
@@ -74,7 +74,7 @@ public class CategoryFrame extends JFrame {
     cp.add(shoesButton);
 
     tracksuitsButton.setBounds(784, 280, 152, 288);
-    tracksuitsButton.setIcon(new ImageIcon("trackkkk.jpg"));
+    tracksuitsButton.setIcon(new ImageIcon("images/tracksuits.jpg"));
     tracksuitsButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         openShopFrame("tracksuits");
@@ -128,7 +128,7 @@ public class CategoryFrame extends JFrame {
 
     public BackgroundPanel() {
       try {
-        backgroundImage = ImageIO.read(new File("neonnn.jpg"));
+        backgroundImage = ImageIO.read(new File("images/background-categories.jpg"));
       } catch (IOException e) {
         e.printStackTrace();
       }

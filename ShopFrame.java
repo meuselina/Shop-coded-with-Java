@@ -50,7 +50,7 @@ public class ShopFrame extends JFrame {
 
     // Load the background image once instead of on every repaint
     try {
-      backgroundImage = ImageIO.read(new File("laser.jpg"));
+      backgroundImage = ImageIO.read(new File("images/background-shop.jpg"));
     } catch (IOException e) {
       backgroundImage = null;
     }
@@ -224,19 +224,19 @@ public class ShopFrame extends JFrame {
   private Image loadImage(Product product) {
     String fileName;
     if (product.getProductType().equalsIgnoreCase("t-shirt")) {
-      fileName = "tshirttt.png";
+      fileName = "images/t-shirt.png";
     } else if (product.getProductType().equalsIgnoreCase("cardigan")) {
-      fileName = "cardi.png";
+      fileName = "images/cardigan.png";
     } else if (product instanceof Tops) {
-      fileName = "oberteill.jpg";
+      fileName = "images/tops.jpg";
     } else if (product instanceof Pants) {
-      fileName = "hoseee.jpg";
+      fileName = "images/pants.jpg";
     } else if (product instanceof Accessories) {
-      fileName = "schmuckkkk.jpg";
+      fileName = "images/accessories.jpg";
     } else if (product instanceof Shoes) {
-      fileName = "schuheeee.jpg";
+      fileName = "images/shoes.jpg";
     } else {
-      fileName = "trackkkk.jpg";
+      fileName = "images/tracksuits.jpg";
     }
     try {
       File imageFile = new File(fileName);

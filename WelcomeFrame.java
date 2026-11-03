@@ -27,7 +27,7 @@ public class WelcomeFrame extends JFrame {
 
     // Background image
     try {
-      backgroundImage = ImageIO.read(new File("mannanledwand.jpg"));
+      backgroundImage = ImageIO.read(new File("images/background-welcome.jpg"));
     } catch (IOException e) {
       e.printStackTrace();
     }
