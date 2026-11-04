@@ -5,6 +5,7 @@
 A desktop fashion shop app built with Java Swing.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+[![Build and test](https://github.com/meuselina/Shop-coded-with-Java/actions/workflows/build.yml/badge.svg)](https://github.com/meuselina/Shop-coded-with-Java/actions/workflows/build.yml)
 ![Swing](https://img.shields.io/badge/GUI-Swing-1f2937?style=for-the-badge)
 ![OOP](https://img.shields.io/badge/OOP-inheritance-8b5cf6?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-0ea5e9?style=for-the-badge)
@@ -42,7 +43,7 @@ javac -encoding UTF-8 *.java
 java WelcomeFrame
 ```
 
-Start it from the project folder, so the app finds its pictures in `images/`.
+The image files need to be in the same folder as the program, so start it from the project folder.
 
 ## Architecture
 
@@ -68,7 +69,6 @@ classDiagram
 | `ShopData.java` | Product data, search and price sorting |
 | `Product.java` | Abstract base class with all shared product attributes |
 | `Tops.java`, `Pants.java`, `Shoes.java`, `Tracksuits.java`, `Accessories.java` | Product categories, each extends `Product` (inheritance) |
-| `images/` | Category pictures and background images |
 
 ## Built with
 
